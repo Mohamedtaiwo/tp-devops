@@ -1,0 +1,13 @@
+VERSION v1.0
+Requests/sec: 111.88
+Average: 8.94ms
+
+VERSION v1.2 (slow)
+Requests/sec: 8.89
+Average: 112.5ms
+
+ANALYSE:
+- Version la plus rapide : v1.0 (111.88 req/sec)
+- Version la plus lente  : v1.2 (8.89 req/sec, time.sleep 100ms)
+- Cause : time.sleep(0.1) ajoute 100ms par requete
+- Version a deployer en production : v1.0
